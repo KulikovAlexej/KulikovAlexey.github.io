@@ -1,0 +1,527 @@
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans-Bold.ttf"); }
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+input[type='number'] {
+  -moz-appearance: textfield; }
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; }
+  .wrapper aside {
+    float: left;
+    margin-right: 2px;
+    width: 320px;
+    background-color: #1f2229; }
+    .wrapper aside .logo_contain .logo {
+      margin-top: 65px;
+      font-size: 20px;
+      margin-left: 30px;
+      margin-bottom: 54px;
+      font-family: "OpenSansBold"; }
+      .wrapper aside .logo_contain .logo h3 {
+        display: inline-block; }
+        .wrapper aside .logo_contain .logo h3:nth-child(2n - 1) {
+          color: green;
+          background-color: white; }
+    .wrapper aside nav {
+      font-family: "OpenSansBold"; }
+      .wrapper aside nav ul {
+        letter-spacing: 1.1px;
+        background-color: #1f2229;
+        list-style: none;
+        padding-left: 0px; }
+        .wrapper aside nav ul li {
+          color: white;
+          font-size: 16px;
+          padding: 26px;
+          padding-left: 30px; }
+          .wrapper aside nav ul li:hover {
+            background-color: #2a2d37; }
+          .wrapper aside nav ul li a {
+            color: white;
+            text-decoration: none; }
+  .wrapper .content_part {
+    float: right;
+    width: 637px; }
+    .wrapper .content_part header {
+      background-color: #00aeef;
+      padding-top: 41px;
+      padding-bottom: 29px;
+      font-family: "OpenSansBold";
+      padding-left: 30px;
+      padding-right: 35px;
+      color: #193945; }
+      .wrapper .content_part header h1 {
+        letter-spacing: 1.1px;
+        margin-bottom: 5px; }
+      .wrapper .content_part header p {
+        font-family: "Arial";
+        font-size: 14px;
+        font-style: normal;
+        line-height: 22px; }
+    .wrapper .content_part section {
+      background-color: #f7f8f8;
+      padding-top: 40px;
+      padding-left: 30px;
+      padding-bottom: 50px;
+      font-family: Arial;
+      color: #a7b2c1; }
+      .wrapper .content_part section .about_payment table {
+        margin-top: 20px; }
+        .wrapper .content_part section .about_payment table tr td {
+          width: 150px; }
+          .wrapper .content_part section .about_payment table tr td:nth-child(2n) {
+            color: #373c43; }
+      .wrapper .content_part section .about_payment .payment_details p {
+        display: inline-block; }
+      .wrapper .content_part section h3 {
+        word-spacing: -2px;
+        margin-top: 28px;
+        font-size: 24px;
+        color: #383d43; }
+      .wrapper .content_part section .cards {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        margin-top: 18px; }
+        .wrapper .content_part section .cards .card {
+          width: 347px;
+          height: 235px;
+          border: 2px solid #e4e9ee;
+          -webkit-border-radius: 15px;
+                  border-radius: 15px;
+          background-color: #f7f8f8; }
+          .wrapper .content_part section .cards .card:hover {
+            -webkit-box-shadow: grey 4px 4px 30px;
+                    box-shadow: grey 4px 4px 30px; }
+          .wrapper .content_part section .cards .card .card_number p {
+            color: #8494ab; }
+          .wrapper .content_part section .cards .card .card_number input {
+            height: 40px;
+            width: 65px;
+            padding: 0;
+            font-size: 20px;
+            text-align: center; }
+        .wrapper .content_part section .cards .front {
+          z-index: 10; }
+          .wrapper .content_part section .cards .front .input_wrap {
+            margin-top: 20px;
+            margin-left: 12px; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number p {
+              margin-bottom: 5px; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number input {
+              -moz-appearance: textfield; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number .valid {
+              border: 1px solid green; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number .invalid {
+              border: 1px solid red; }
+            .wrapper .content_part section .cards .front .input_wrap .card_date {
+              margin-top: 12px;
+              color: #8494ab; }
+              .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months {
+                position: relative;
+                float: left;
+                width: 68px;
+                height: 40px; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months:after {
+                  content: url(../img/arrow.png);
+                  position: absolute;
+                  top: 50%;
+                  right: 10px;
+                  z-index: 1;
+                  margin-top: -7px;
+                  pointer-events: none; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months #card_months {
+                  appearance: none;
+                  font-size: 15px;
+                  width: 100%;
+                  padding: 0 10px;
+                  background: white;
+                  -webkit-border-radius: 3px;
+                          border-radius: 3px;
+                  border: solid #e4e9ee 2px;
+                  outline: 0;
+                  height: 100%;
+                  -webkit-appearance: none;
+                  -moz-appearance: none; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months #card_months:hover {
+                  cursor: pointer; }
+              .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years {
+                position: relative;
+                float: left;
+                width: 87px;
+                height: 40px;
+                margin-left: 12px; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years:after {
+                  content: url(../img/arrow.png);
+                  position: absolute;
+                  top: 50%;
+                  right: 10px;
+                  z-index: 1;
+                  margin-top: -7px;
+                  pointer-events: none; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years #card_years {
+                  font-size: 15px;
+                  width: 100%;
+                  padding: 0 10px;
+                  background: white;
+                  -webkit-border-radius: 3px;
+                          border-radius: 3px;
+                  border: solid #e4e9ee 2px;
+                  outline: 0;
+                  height: 100%;
+                  -webkit-appearance: none;
+                  -moz-appearance: none; }
+                .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years #card_years:hover {
+                  cursor: pointer; }
+            .wrapper .content_part section .cards .front .input_wrap #card_owner {
+              margin-top: 20px;
+              width: 297px;
+              font-family: Arial;
+              font-size: 20px; }
+            .wrapper .content_part section .cards .front .input_wrap .valid {
+              border: 1px solid green; }
+            .wrapper .content_part section .cards .front .input_wrap .invalid {
+              border: 1px solid red; }
+        .wrapper .content_part section .cards .back {
+          position: absolute;
+          z-index: 1;
+          left: 193px;
+          top: 20px;
+          width: 367px; }
+          .wrapper .content_part section .cards .back .stripe {
+            width: 100%;
+            height: 43px;
+            background-color: #e4e9ee;
+            margin-top: 25px;
+            margin-bottom: 15px; }
+          .wrapper .content_part section .cards .back p {
+            text-align: right;
+            margin-right: 30px; }
+          .wrapper .content_part section .cards .back input {
+            float: right;
+            margin-right: 15px;
+            width: 115px;
+            -moz-appearance: textfield; }
+          .wrapper .content_part section .cards .back .valid {
+            border: 1px solid green; }
+          .wrapper .content_part section .cards .back .invalid {
+            border: 1px solid red; }
+      .wrapper .content_part section #send_data {
+        padding: 9px 49px;
+        margin-top: 34px;
+        color: white;
+        font-size: 17px;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#87b700), to(#a3c700));
+        background-image: -webkit-linear-gradient(bottom, #87b700 0%, #a3c700 100%);
+        background-image: linear-gradient(0deg, #87b700 0%, #a3c700 100%);
+        -webkit-border-radius: 4px;
+                border-radius: 4px;
+        border: none; }
+      .wrapper .content_part section .disabled {
+        background-color: grey; }
+      .wrapper .content_part section input {
+        padding: 10px;
+        border: 2px solid #e4e9ee; }
+    .wrapper .content_part footer {
+      background-color: #373c43;
+      color: #808793;
+      padding: 10px;
+      padding-top: 24px;
+      padding-left: 30px; }
+      .wrapper .content_part footer p {
+        font-family: Arial;
+        font-size: 12px;
+        margin: 5px 0;
+        line-height: 17px;
+        margin-bottom: 12px; }
+
+@media screen and (max-width: 1200px) {
+  .wrapper aside .contain_hamburger {
+    display: none; }
+  .wrapper aside nav {
+    display: block; } }
+
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    width: 100%; }
+    .wrapper aside {
+      width: 100%; }
+      .wrapper aside nav {
+        display: none; }
+        .wrapper aside nav ul li {
+          text-align: left;
+          font-size: 3.5rem;
+          padding-top: 35px;
+          padding-bottom: 35px; }
+      .wrapper aside .logo_contain {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .wrapper aside .logo_contain .logo {
+          float: left;
+          width: 350px; }
+          .wrapper aside .logo_contain .logo img {
+            width: 100%; }
+        .wrapper aside .logo_contain .contain_hamburger {
+          display: block;
+          float: right;
+          color: white;
+          margin-right: 30px; }
+          .wrapper aside .logo_contain .contain_hamburger #hamburger {
+            margin-top: 30px;
+            position: relative;
+            display: block;
+            height: 8rem;
+            width: 8rem;
+            background: #1f2229;
+            -webkit-transition: 0.3s;
+            transition: 0.3s; }
+            .wrapper aside .logo_contain .contain_hamburger #hamburger span {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              height: 0;
+              width: 3rem;
+              border: 0.25rem solid white;
+              -webkit-border-radius: 3rem;
+                      border-radius: 3rem;
+              margin: -0.25rem 0 0 -1.75rem;
+              -webkit-transition: 0.3s;
+              transition: 0.3s; }
+              .wrapper aside .logo_contain .contain_hamburger #hamburger span:before, .wrapper aside .logo_contain .contain_hamburger #hamburger span:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                width: 3.5rem;
+                height: 0.5rem;
+                background: white;
+                -webkit-border-radius: 3rem;
+                        border-radius: 3rem;
+                margin: 0 0 0 -1.75rem;
+                -webkit-transition: 0.3s;
+                transition: 0.3s; }
+              .wrapper aside .logo_contain .contain_hamburger #hamburger span:before {
+                top: -1.125rem; }
+              .wrapper aside .logo_contain .contain_hamburger #hamburger span:after {
+                top: 0.625rem; }
+          .wrapper aside .logo_contain .contain_hamburger #hamburger.open span {
+            height: 3rem;
+            margin: -1.875rem 0 0 -1.875rem;
+            border-width: 0.375rem; }
+            .wrapper aside .logo_contain .contain_hamburger #hamburger.open span:before, .wrapper aside .logo_contain .contain_hamburger #hamburger.open span:after {
+              top: 1.1875rem;
+              width: 2rem;
+              margin: 0 0 0 -1rem; }
+            .wrapper aside .logo_contain .contain_hamburger #hamburger.open span:before {
+              -webkit-transform: rotate(-135deg);
+                  -ms-transform: rotate(-135deg);
+                      transform: rotate(-135deg); }
+            .wrapper aside .logo_contain .contain_hamburger #hamburger.open span:after {
+              -webkit-transform: rotate(135deg);
+                  -ms-transform: rotate(135deg);
+                      transform: rotate(135deg); }
+    .wrapper .content_part {
+      width: 100%;
+      margin: 0 auto; }
+      .wrapper .content_part header {
+        padding-top: 60px;
+        padding-bottom: 80px; }
+        .wrapper .content_part header h1 {
+          font-size: 4rem; }
+        .wrapper .content_part header p {
+          font-size: 1.5rem;
+          line-height: 27px; }
+      .wrapper .content_part section {
+        padding-top: 60px; }
+        .wrapper .content_part section .about_payment p {
+          font-size: 3rem; }
+        .wrapper .content_part section .about_payment table tbody tr td {
+          font-size: 2.5rem;
+          width: 400px;
+          padding-top: 10px;
+          padding-bottom: 10px; }
+        .wrapper .content_part section h3 {
+          margin-top: 60px;
+          font-size: 3rem; }
+        .wrapper .content_part section .cards {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          .wrapper .content_part section .cards .card {
+            width: 90%;
+            height: auto;
+            margin: 10px;
+            margin-left: 0;
+            left: 0;
+            top: 0; }
+          .wrapper .content_part section .cards .front {
+            padding: 30px;
+            padding-right: 0; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number p {
+              font-size: 3rem; }
+            .wrapper .content_part section .cards .front .input_wrap .card_number input {
+              height: 6rem;
+              width: 8rem;
+              margin-right: 20px;
+              font-size: 3rem; }
+            .wrapper .content_part section .cards .front .input_wrap .card_date p {
+              font-size: 3rem; }
+            .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months {
+              width: 11rem;
+              height: 7rem; }
+              .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months #card_months {
+                font-size: 2.5rem;
+                padding-left: 60px; }
+            .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years {
+              width: 17rem;
+              height: 7rem; }
+              .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years #card_years {
+                font-size: 2.5rem;
+                padding-left: 60px; }
+            .wrapper .content_part section .cards .front .input_wrap #card_owner {
+              height: 7rem;
+              width: 90%;
+              font-size: 3rem;
+              padding-left: 35px; }
+          .wrapper .content_part section .cards .back {
+            margin: 0 auto;
+            position: relative;
+            top: -75px;
+            padding-bottom: 30px; }
+            .wrapper .content_part section .cards .back .stripe {
+              height: 5rem; }
+            .wrapper .content_part section .cards .back p {
+              font-size: 2rem; }
+            .wrapper .content_part section .cards .back input {
+              margin-top: 20px;
+              height: 7rem;
+              width: 15rem;
+              font-size: 4rem;
+                font-size-text-align: center; }
+        .wrapper .content_part section #send_data {
+          font-size: 4rem;
+          padding: 20px 60px;
+          -webkit-border-radius: 13px;
+                  border-radius: 13px; } }
+
+@media only screen and (max-width: 768px) {
+  .wrapper aside nav ul li {
+    font-size: 2.5rem; }
+  .wrapper .content_part header h1 {
+    font-size: 3rem; }
+  .wrapper .content_part section .about_payment table tbody tr td {
+    width: 200px;
+    font-size: 2rem; }
+  .wrapper .content_part section h3 {
+    font-size: 2.5rem; }
+  .wrapper .content_part section .cards .front {
+    padding: 10px;
+    padding-bottom: 20px; }
+    .wrapper .content_part section .cards .front .input_wrap .card_number p {
+      font-size: 2rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_number input {
+      width: 4rem;
+      height: 3rem;
+      font-size: 1.5rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_date p {
+      font-size: 2rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months {
+      height: 4rem;
+      width: 6rem; }
+      .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months #card_months {
+        padding-left: 10px;
+        font-size: 1.5rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years {
+      height: 4rem;
+      width: 10rem; }
+      .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years #card_years {
+        padding-left: 10px;
+        font-size: 1.5rem; }
+    .wrapper .content_part section .cards .front .input_wrap #card_owner {
+      width: 80%;
+      height: 3rem;
+      font-size: 1.5rem; }
+  .wrapper .content_part section .cards .back p {
+    font-size: 1.5rem; }
+  .wrapper .content_part section .cards .back input {
+    height: 3rem;
+    width: 4rem;
+    font-size: 1.5rem; } }
+
+@media only screen and (max-width: 480px) {
+  .wrapper aside .logo_contain .contain_hamburger {
+    margin-right: 0px; }
+    .wrapper aside .logo_contain .contain_hamburger #hamburger {
+      margin-top: 15px; }
+  .wrapper aside nav ul li {
+    font-size: 1.5rem; }
+  .wrapper .content_part header h1 {
+    font-size: 2.5rem; }
+  .wrapper .content_part section .about_payment p {
+    font-size: 2rem; }
+  .wrapper .content_part section .about_payment table tbody tr td {
+    width: 150px;
+    font-size: 1rem; }
+  .wrapper .content_part section h3 {
+    font-size: 1.7rem; }
+  .wrapper .content_part section .cards .front .input_wrap .card_number p {
+    font-size: 1.2rem; }
+  .wrapper .content_part section .cards .front .input_wrap .card_number input {
+    width: 2.8rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-right: 8px; }
+  .wrapper .content_part section .cards .front .input_wrap .card_date p {
+    font-size: 1.2rem; }
+  .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months {
+    height: 3rem;
+    width: 4rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_months #card_months {
+      padding-left: 10px;
+      font-size: 1.2rem; }
+  .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years {
+    height: 3rem;
+    width: 6rem; }
+    .wrapper .content_part section .cards .front .input_wrap .card_date .wrap_card_years #card_years {
+      padding-left: 10px;
+      font-size: 1.2rem; }
+  .wrapper .content_part section .cards .front .input_wrap #card_owner {
+    width: 80%;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding-left: 5px; }
+  .wrapper .content_part section .cards .back p {
+    font-size: 1.2rem; }
+  .wrapper .content_part section .cards .back input {
+    height: 1rem;
+    width: 3rem;
+    font-size: 1.2rem;
+    margin-top: 10px; }
+  .wrapper .content_part section #send_data {
+    font-size: 2rem;
+    padding: 20px 50px;
+    margin-top: 0; } }
